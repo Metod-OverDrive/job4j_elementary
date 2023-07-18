@@ -14,6 +14,7 @@ class SwitchArrayTest {
         int[] expected = {4, 2, 3, 1};
         assertThat(result).containsExactly(expected);
     }
+
     @Test
     void swapMidNumbersWhereLengthMore4() {
         int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
