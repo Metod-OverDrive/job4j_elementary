@@ -5,13 +5,27 @@ import static java.lang.Math.pow;
 
 public class Point {
 
+    private int x;
+    private int y;
+
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
+    }
+
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
+    }
+
     public static double distance(int x1, int y1, int x2, int y2) {
         double rsl = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
         return rsl;
     }
 
     public static void main(String[] args) {
-        double result = Point.distance(0, 0, 2, 0);
+        Point point1 = new Point(0, 0);
+        Point point2 = new Point(2, 0);
+        double result = point1.distance(point2);
         System.out.println("result (0, 0) to (2, 0) " + result);
     }
 }
