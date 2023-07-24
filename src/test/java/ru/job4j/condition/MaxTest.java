@@ -30,4 +30,25 @@ class MaxTest {
         int out = Max.max(left, right);
         assertThat(out).isEqualTo(excepted);
     }
+
+    @Test
+    void when3To3To3Then3() {
+        int left = 3;
+        int right = 3;
+        int another = 3;
+        int excepted = 3;
+        int out = Max.max(left, right, another);
+        assertThat(out).isEqualTo(excepted);
+    }
+
+    @Test
+    void when3To3To3To3Then3() {
+        int left = 3;
+        int right = 3;
+        int another1 = 3;
+        int another2 = 3;
+        int excepted = 3;
+        int out = Max.max(left, right, another1, another2);
+        assertThat(out).isEqualTo(excepted);
+    }
 }
